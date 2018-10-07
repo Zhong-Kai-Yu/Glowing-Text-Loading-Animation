@@ -1,0 +1,87 @@
+body
+{
+  margin: 0;
+  padding: 0;
+  background: #262626;
+}
+
+ul
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+ul li
+{
+  list-style: none;
+  color: #484848;
+  font-family: arial;
+  font-size: 5em;
+  letter-spacing: 15px;
+  animation: animate 1.4s linear infinite;
+  /* animate 代表這個元件所要使用的動畫
+     1.4s 代表整個動畫的持續時間
+     linear 代表動畫的過程保持同樣的速度
+     infinite 代表動畫要不斷重複
+  */
+}
+
+@keyframes animate
+{
+    0% /* 代表動畫進行到整體時間的百分之幾 */
+    {
+      color: #484848;
+      text-shadow: none;
+    }
+    90%
+    {
+      color: #484848;
+      text-shadow: none;
+    }
+    100%
+    {
+      color: #fff900;
+      text-shadow: 0 0 7px #fff900, 0 0 50px #ff6c00;
+      /* 兩個字幕陰影
+         第一個 0 代表水平陰影寬度
+         第二個 0 代表垂直陰影寬度
+         7px 代表模糊效果
+         #fff900 代表顏色
+      */
+    }
+}
+
+ul li:nth-child(1)
+{
+  animation-delay: .2s;
+  /* 動畫延時 0.2秒後才開始動作 */
+}
+ul li:nth-child(2)
+{
+  animation-delay: .4s;
+}
+ul li:nth-child(3)
+{
+  animation-delay: .6s;
+}
+ul li:nth-child(4)
+{
+  animation-delay: .8s;
+}
+ul li:nth-child(5)
+{
+  animation-delay: 1s;
+}
+ul li:nth-child(6)
+{
+  animation-delay: 1.2s;
+}
+ul li:nth-child(7)
+{
+  animation-delay: 1.4s;
+}
